@@ -16,3 +16,6 @@
     {% endfor %}
     {% include 'paginator.html' with page=page_obj %}
 {% endblock %}
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 10px;">
+{% endif %}

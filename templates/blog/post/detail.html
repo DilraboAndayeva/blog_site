@@ -7,5 +7,12 @@
         Published {{ post.publish }} by {{ post.author }}
     </p>
 
+
+{% if post.image %}
+    <div class="post-image" style="margin: 15px 0;">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
+    </div>
+{% endif %}
+
     {{ post.body|linebreaks }}
 {% endblock %}
